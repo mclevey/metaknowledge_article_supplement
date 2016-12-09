@@ -1,0 +1,254 @@
+body            { font: 18px;
+                  /*font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif;*/
+                  font-family:  "source-sans-pro",sans-serif
+                }
+hr              { width: 50%;
+                }
+table           { display: inline-table;
+                  border-collapse: collapse;
+                  width: 80%;
+                  position: absolute;
+                  margin-left: 10%;
+                  table-layout: fixed;
+                }
+th              { padding: 8px;
+                  text-align: left;
+                  border-bottom: 4px solid #aaa;
+                  font-size: 16px;
+                }
+td              { padding: 8px;
+                  text-align: left;
+                  border-bottom: 1px solid #ddd;
+                  font-size: 12px;
+                }
+tr:hover        {background-color: #f3f3f3;
+                }
+/*th:hover        {background-color: white}*/
+
+.container.hidden,
+.panel.hidden,
+.hidden         { display: none;
+                }
+.links line,
+path            { stroke: #404040;
+                  opacity: 0.4;
+                }
+.nodes circle   { stroke: #fff;
+                  stroke-width: 1px;
+                }
+.container      { display: inline-block;
+                  position: relative;
+                  width: 80%;
+                  padding-bottom: 45%;
+                  vertical-align: top;
+                  margin-left: 10%;
+                  margin-right: 10%;
+                  overflow-x: hidden;
+                  overflow-y: scroll;
+                }
+
+.visArea        { display: inline-block;
+                  position: relative;
+                  /*width: 99%;*/
+                  width: 99%;
+                  vertical-align: top;
+                  overflow-x: hidden;
+                  overflow-y: scroll;
+                  border: solid gainsboro;
+                }
+div.panel       { display: inline-block;
+                  position: relative;
+                  width: 0%;
+                  vertical-align: top;
+                  /*margin: 1%;*/
+                  padding-top: 10%;
+                  padding-bottom: 25%;
+                  /*border-right: solid 2px gainsboro;*/
+                  overflow: hidden;
+                  z-index: 1;
+                  white-space: nowrap;
+                  }
+.icon           { margin: 3px;
+                  /*color: steelblue;*/
+                  margin-left: 0%;
+                }
+.iconText       { margin: 3px;
+                }
+.panelTitle     { margin-left: 10px;
+                  font-weight: bold;
+                  margin-top: 18px;
+                  margin-bottom: 5px;
+                  font-size: 1.1em;
+                }
+.panelOption    { margin-left: 15px;
+                  margin-right: 10px;
+                  font-weight: lighter;
+                  white-space: nowrap;
+                  font-size: 0.9em;
+                }
+.checkBox       { margin-right: 10px;
+                  position: absolute;
+                  right: 0px;
+                }
+.select         { background: transparent;
+                  min-width: 50px;
+                  width: 35%;
+                  padding: 3px;
+                  font-size: 12px;
+                  line-height: 1;
+                  border-radius: 0;
+                  height: 18px;
+                  margin-right: 5px;
+                  margin-left: 5px;
+                  vertical-align: middle;
+                  position: absolute;
+                  right: 0px;
+                }
+input#threshold.range
+                { margin-right: 10px;
+                  margin-left: 20px;
+                  position: absolute;
+                  width: 60%;
+                  left: 0px;
+                  font-size: 0.8em;
+                }
+span.range      { position: absolute;
+                  right: 0px;
+                  margin-right: 10px;
+                }
+.plot           { display: inline-block;
+                  position: relative;
+                  width: 75%;
+                  margin-left: 12.5%;
+                }
+.plot.network   { padding-bottom: 75%;
+                }
+.plot.RPYS      { padding-bottom: 37.5%;
+                  overflow-x: visible;
+                }
+.console        { display: inline-block;
+                  position: relative;
+                  width: 80%;
+                  padding-bottom: 5%;
+                  vertical-align: top;
+                  margin-left: 10%;
+                  margin-right: 10%;
+                  overflow-x: hidden;
+                  overflow-y: hidden;
+                }
+.svg-content    { display: inline-block;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                }
+
+.button         { background-color: #4CAF50; /* Green */
+                  border: none;
+                  color: white;
+                  padding: 15px 32px;
+                  text-align: center;
+                  text-decoration: none;
+                  display: inline-block;
+                  font-size: 16px;
+                }
+.axis path,
+.axis line      { fill: none;
+                  stroke: lightgrey;
+                  stroke-width: 2;
+                  shape-rendering: crispEdges;
+                }
+.axis path      { display: none;
+                }
+.axis text      { font-family: sans-serif;
+                  font-size: 12px;
+                }
+.point          { r: 5;
+                  /*fill: #EC7063;*/
+                }
+.line           { fill: none;
+                  stroke-width: 3px;
+                  pointer-events: none;
+                }
+p.title         { text-align: center;
+                  font-size: 30px;
+                  font-weight: bold;
+                }
+#TableContainer { overflow-y: visible;
+                  column-width: 10px;
+                }
+#tooltip        { position: absolute;
+                  width: auto;
+                  height: auto;
+                  padding: 5px;
+                  background-color: white;
+                  background-color: rgba(254, 254, 254, 0.8);
+                  -webkit-border-radius: 5px;
+                  -moz-border-radius: 5px;
+                  border-radius: 5px;
+                  -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+                  -moz-box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.4);
+                  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.4);
+                  pointer-events: none;
+                }
+#tooltip p      { margin: 0;
+                  font-size: 16px;
+                  line-height: 20px;
+                }
+
+.customContextMenu
+                { z-index: 1000;
+                  position: absolute;
+                  overflow: hidden;
+                  border: 1px solid #CCC;
+                  white-space: nowrap;
+                  font-family: sans-serif;
+                  font-size: 0.7em;
+                  background: #FFF;
+                  color: #333;
+                  border-radius: 5px;
+                  padding: 0px;
+                }
+
+.customContextMenu li
+                { padding: 4px 6px;
+                  cursor: pointer;
+                  list-style: none;
+                }
+
+.customContextMenu li:hover
+                { background-color: #DEF;
+                }
+#mkLogo         { width: 80px;
+                  height: auto;
+                  /*padding-left: 0px;
+                  padding-top: 0px;
+                  padding-right: 5px;
+                  padding-bottom: 5px;*/
+                  border-radius: 80px;
+                  display: block;
+                  margin-left: auto;
+                  margin-right: auto;
+                }
+#mkTitle        { font-family: "source-sans-pro",sans-serif;
+                  text-rendering: optimizeLegibility;
+                  font-weight: bold;
+                  font-size: 1.5em;
+                  color: black;
+                  text-align: center;
+                }
+a               { text-decoration: none;
+                }
+#netLab         { font-family: "volkhov",serif;
+                  text-align: center;
+                  font-size: 1em;
+                  color: #555;
+                  font-style: italic;
+                }
+#titleAuthors   { font-family: "volkhov",serif;
+                  font-size: 0.8em;
+                  text-align: center;
+                  color: #555;
+                  /*font-style: italic;*/
+                  text-rendering: optimizeLegibility;
+                }
+#title          { margin-bottom: 5px;}
