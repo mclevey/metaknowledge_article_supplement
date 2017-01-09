@@ -27,6 +27,7 @@ tr:hover        {background-color: #f3f3f3;
 
 .container.hidden,
 .panel.hidden,
+.miniGraph.hidden,
 .hidden         { display: none;
                 }
 .links line,
@@ -38,11 +39,11 @@ path            { stroke: #404040;
                 }
 .container      { display: inline-block;
                   position: relative;
-                  width: 80%;
+                  width: 95%;
                   padding-bottom: 45%;
                   vertical-align: top;
-                  margin-left: 10%;
-                  margin-right: 10%;
+                  margin-left: 5%;
+                  margin-right: 5%;
                   overflow-x: hidden;
                   overflow-y: scroll;
                 }
@@ -53,40 +54,54 @@ path            { stroke: #404040;
                   width: 99%;
                   vertical-align: top;
                   overflow-x: hidden;
-                  overflow-y: scroll;
+                  overflow-y: hidden;
+                  /*overflow-y: scroll;*/
                   border: solid gainsboro;
                 }
-div.panel       { display: inline-block;
-                  position: relative;
-                  width: 0%;
+div.panel,
+div.miniGraph   { display: inline-block;
+                  position: absolute;
                   vertical-align: top;
-                  /*margin: 1%;*/
-                  padding-top: 10%;
-                  padding-bottom: 25%;
-                  /*border-right: solid 2px gainsboro;*/
+                  padding-top: 5%;
+                  /*padding-bottom: 28%;*/
                   overflow: hidden;
-                  z-index: 1;
+                  z-index: 0.9;
                   white-space: nowrap;
+                  width: 20%;
+                  height: 100%;
                   }
-.icon           { margin: 3px;
+div.panel       {
+                  border-right: solid 2px gainsboro;
+                }
+div.miniGraph   { border-left: solid 2px gainsboro;
+                  /*padding-bottom: 13.7%;*/
+                  position: absolute;
+                  right: 0;
+                }
+div.panelTitle  { width: 15%;}
+.icon, .fa       { margin: 3px;
                   /*color: steelblue;*/
                   margin-left: 0%;
                 }
 .iconText       { margin: 3px;
                 }
-.panelTitle     { margin-left: 10px;
+div.icons       { margin-left: 11px;}
+.panelIcon      { position: absolute;
+                  z-index: 1;
+                }
+.panelTitle     { margin-left: 5%;
                   font-weight: bold;
                   margin-top: 18px;
                   margin-bottom: 5px;
                   font-size: 1.1em;
                 }
-.panelOption    { margin-left: 15px;
-                  margin-right: 10px;
+.panelOption    { margin-left: 5%;
+                  margin-right: 5%;
                   font-weight: lighter;
                   white-space: nowrap;
                   font-size: 0.9em;
                 }
-.checkBox       { margin-right: 10px;
+.checkBox       { margin-right: 5%;
                   position: absolute;
                   right: 0px;
                 }
@@ -98,15 +113,15 @@ div.panel       { display: inline-block;
                   line-height: 1;
                   border-radius: 0;
                   height: 18px;
-                  margin-right: 5px;
-                  margin-left: 5px;
+                  margin-right: 2.5%;
+                  margin-left: 2.5%;
                   vertical-align: middle;
                   position: absolute;
                   right: 0px;
                 }
 input#threshold.range
-                { margin-right: 10px;
-                  margin-left: 20px;
+                { margin-right: 5%;
+                  margin-left: 10%;
                   position: absolute;
                   width: 60%;
                   left: 0px;
@@ -114,17 +129,19 @@ input#threshold.range
                 }
 span.range      { position: absolute;
                   right: 0px;
-                  margin-right: 10px;
+                  margin-right: 5%;
                 }
 .plot           { display: inline-block;
                   position: relative;
-                  width: 75%;
-                  margin-left: 12.5%;
+                  margin-left: 20%;
+                  height: 100%;
                 }
-.plot.network   { padding-bottom: 75%;
+.plot.network   { padding-bottom: 59%;
+                  width: 59%;
                 }
 .plot.RPYS      { padding-bottom: 37.5%;
                   overflow-x: visible;
+                  width: 75%;
                 }
 .console        { display: inline-block;
                   position: relative;
@@ -252,3 +269,70 @@ a               { text-decoration: none;
                   text-rendering: optimizeLegibility;
                 }
 #title          { margin-bottom: 5px;}
+
+.fa-bar-chart,
+.fa-cog         { color: #4C4C4C;
+                  top: 0px;
+                  position: absolute;
+                  margin: 10px;
+                }
+.fa-cog         { left: 3px;
+                }
+.fa-bar-chart   { right: 0px}
+
+#networkMinigraphSVG
+                { width: 100%;
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  background-color: white;
+                }
+
+div.smallMultiples
+                { width: 100%;
+                }
+svg.smallMultiples
+                { width: 100%;
+                  /*margin-left: 5%;*/
+                  /*position: absolute;*/
+                }
+/*svg.smallMultiples.node
+                { top: 0px;
+                }
+svg.smallMultiples.community
+                { top: 200px;
+                }
+svg.smallMultiples.author
+                { top: 400px;
+                }*/
+.smallMult path,
+.smallMult line { display: initial;
+                  stroke: lightgrey;
+                  opacity: 1;
+                  stroke-width: 1.5px;
+                }
+
+.smallMult.subTitle
+                { font-size: 0.9em;
+                  text-align: center;
+                  font-weight: bold;
+                  margin: 0px;
+                  /*margin-top: 10px;*/
+                }
+div.statistics  {
+                  font-weight: lighter;
+                  font-size: 0.9 em;
+                }
+p.statistics    { margin-top: 0.5em;
+                  text-align: left;
+                  margin-left: 5%;
+                }
+.smallMult.title{ margin-bottom: 0.5em;
+                  font-size: 1.1em;
+                  text-align: left;
+                  margin-left: 5%;
+                  margin-bottom: 20px;
+                }
+.iconDiv        { position: absolute;
+                  bottom: 50px;
+                }
